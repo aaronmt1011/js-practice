@@ -154,3 +154,41 @@ let carProps = cars.map(car => {
 console.log(carProps);
 
 
+
+// .forEach() is used to go through each element of an array
+// .forEach() is used below to go through cars array and adds new object
+cars.forEach(car => {
+    car['size'] = "large";
+    if(car.capacity <= 5){
+        car['size'] = "medium";
+    }
+    if(car.capacity <= 3){
+        car['size'] = "small";
+    }
+});
+console.log(cars);
+
+
+
+// .sort() compares 2 objects ands puts the which ever first in order depending
+// on the function that is used to sort.
+// .sort() is used below to compare the different car objects capacity.
+// Make sure to always add the case for zero when the compared value of both 
+// objects is the same to avoid unnecessary swaps.
+let sortedCars = cars.sort((c1, c2) => (c1.capacity < c2.capacity) ? 1 : (c1.capacity> c2.capacity) ? -1 : 0);
+console.log(sortedCars);
+
+
+
+// .some() is useful for checking if an object fulfills a conditions
+// .some() is used below to check if there is an array element that is red and 
+// has a seating capacity of 7. (should be true)
+console.log(cars.some(car => car.color === 'red' &&  car.capacity === 7));
+
+
+
+// .every() is similar as .some() but it checks if every array object fulfulls
+// the condition
+// .every() is used to check if every array element has a capacity of 5 or more
+// This should be false.
+console.log(cars.every(car => car.capacity >= 5));
