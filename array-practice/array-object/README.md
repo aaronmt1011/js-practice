@@ -17,4 +17,8 @@
     <li><b>.find</b> - used to return a matching element</li>
     <li><b>.filter</b> - similar to .find() but returns <em>multiple</em> matching elements</li>
     <li><b>.map</b> - transforms an array (of objects) into a new array of different objects</li>
+    <li><b>.forEach</b> - is used to go through each array element</li>
+    <li><b>.sort</b> - compares 2 array objects to each other and places one higher on the array index (the way it sorts an array depends on the function)</li>
+    <li><b>.some</b> - checks if an object element fulfills a conditions ("red", capacity: 5, etc.)</li>
+    <li><b>.every</b> - checks if every object element (from all the array indexes) fulfulls a conditions</li>
 </ul>
